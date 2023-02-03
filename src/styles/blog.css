@@ -283,3 +283,6 @@ blockquote .source {
   color: var(--color);
   font-size: 1rem;
 }
+a[href="/admin"] {
+  display: hidden;
+}

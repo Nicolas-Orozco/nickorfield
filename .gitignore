@@ -1,7 +1,5 @@
 # build output
 dist/
-dist/admin/index.html
-admin/index.html
 # dependencies
 node_modules/
 
