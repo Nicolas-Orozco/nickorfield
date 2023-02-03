@@ -78,6 +78,9 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					{allPosts.map((p) => <BlogPostPreview post={p} />)}
 				</section>
 			</main>
+			<footer>
+			<a href="/admin">Admin Dashboard 🔐</a>
+			</footer>
 		</div>
 	</body>
 </html>
