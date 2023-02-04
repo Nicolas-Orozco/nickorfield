@@ -1,25 +1,32 @@
 lockfileVersion: 5.4
 
 specifiers:
+<<<<<<< HEAD
   '@astrojs/netlify': ^2.1.1
-  astro: ^2.0.5,
+  astro: ^2.0.5
+=======
   '@astrojs/react': ^2.0.2
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: 1.9.2
+>>>>>>> develop
   astro-netlify-cms: ^0.5.2
   react: ^18.0.0
   react-dom: ^18.0.0
 
 dependencies:
+<<<<<<< HEAD
   '@astrojs/netlify': 2.1.1_astro@2.0.6
-  astro-netlify-cms: 0.5.2_astro@2.0.6,
+  astro-netlify-cms: 0.5.2_astro@2.0.6
+=======
   '@astrojs/react': 2.0.2_fxtgt6bjwd6p4cwoordejim2zi
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   astro-netlify-cms: 0.5.2_astro@1.9.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+>>>>>>> develop
+
 devDependencies:
   astro: 2.0.6
 
