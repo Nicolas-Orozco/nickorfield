@@ -11,6 +11,8 @@ export interface Props {
 }
 
 const { title, author, authorURL, publishDate, heroImage, alt } = Astro.props as Props;
+import Comments from "../components/Comments"
+
 ---
 
 <div class="layout">
@@ -26,6 +28,7 @@ const { title, author, authorURL, publishDate, heroImage, alt } = Astro.props as
 				<slot />
 			</main>
 		</div>
+		<Comments client:load/>
 	</article>
 </div>
 
