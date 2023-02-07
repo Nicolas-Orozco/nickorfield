@@ -1,6 +1,6 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1).slice(0, -1); // remove the first "/"
+const currentPath = pathname.slice(1).slice(0, -1); // remove the two "/" at beginning and end of string
 ---
 <div class="flex justify-between">
 <div class="tabs">
@@ -14,5 +14,4 @@ const currentPath = pathname.slice(1).slice(0, -1); // remove the first "/"
     <option value="retro">Retro</option>
     <option value="luxury">Dark</option>
   </select>
-  <h1>{currentPath}</h1>
 </div>

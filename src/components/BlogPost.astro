@@ -17,7 +17,6 @@ import ThemeWrapper from './ThemeWrapper.astro';
 ---
 
 <div class="layout">
-	<ThemeWrapper>
 		<div>
 			<header>
 				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
@@ -30,5 +29,4 @@ import ThemeWrapper from './ThemeWrapper.astro';
 			</main>
 		</div>
 		<Comments client:load/>
-	</ThemeWrapper>
 </div>
