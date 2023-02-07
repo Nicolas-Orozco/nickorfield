@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPost from '../components/BlogPost.astro';
+import ThemeWrapper from '../components/ThemeWrapper.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, authorURL, heroImage, permalink, alt } = content;
@@ -15,10 +16,10 @@ const { title, description, publishDate, author, authorURL, heroImage, permalink
 
 	<body>
 		<BlogHeader />
-		<div class="wrapper">
+		<ThemeWrapper class="wrapper">
 			<BlogPost {title} {author} {authorURL} {heroImage} {publishDate} {alt}>
 				<slot />
 			</BlogPost>
-		</div>
+		</ThemeWrapper>
 	</body>
 </html>

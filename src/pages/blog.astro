@@ -3,6 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import ThemeWrapper from '../components/ThemeWrapper.astro';
 import { SITE } from '../config';
 
 // Component Script:
@@ -29,7 +30,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 	<body>
 		<BlogHeader />
-		<div class="wrapper">
+		<ThemeWrapper class="wrapper">
 			<main class="content">
 				<section class="intro">
 					<h1 class="latest">{title}</h1>
@@ -41,6 +42,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			</main>
 			<footer>
 			</footer>
-		</div>
+		</ThemeWrapper>
 	</body>
 </html>

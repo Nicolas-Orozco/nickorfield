@@ -5,7 +5,7 @@ function Comments() {
     const s = document.createElement("script");
     s.setAttribute("repo", "Nicolas-Orozco/pozo-comments");
     s.setAttribute("issue-term", "title");
-    s.setAttribute("theme", "preferred-color-scheme");
+    s.setAttribute("theme", "github-dark");
     s.setAttribute("crossorigin", "anonymous");
     s.src = "https://utteranc.es/client.js";
     s.async = true;

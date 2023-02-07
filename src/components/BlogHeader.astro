@@ -39,5 +39,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
 		<a class={`${currentPath === "blog" ? "tab-active" : ""} tab tab-lifted tab-lg`} href="/blog">Blog</a> 
 		<a class={`${currentPath === "about" ? "tab-active" : ""} tab tab-lifted tab-lg`} href="/about">About</a>
 		<a class={`${currentPath === "social" ? "tab-active" : ""} tab tab-lifted tab-lg`} href="/social">Social</a>
+		<select data-choose-theme class="select select-bordered w-32">
+			<option value="garden" selected>Light</option>
+			<option value="retro">Retro</option>
+			<option value="luxury">Dark</option>
+		  </select>
 	  </div>
 </header>
