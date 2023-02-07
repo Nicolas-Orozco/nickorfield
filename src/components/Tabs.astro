@@ -1,7 +1,7 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 /* Remove first slash and last slash of string */
-const currentPath = pathname.slice(1).slice(-1)
+const currentPath = pathname.slice(1)
 ---
 <div class="flex justify-between">
 <div class="tabs">
@@ -15,5 +15,4 @@ const currentPath = pathname.slice(1).slice(-1)
     <option value="retro">Retro</option>
     <option value="luxury">Dark</option>
   </select>
-  <h1>{Astro.url.pathname}</h1>
 </div>
