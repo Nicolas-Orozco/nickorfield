@@ -15,8 +15,8 @@ const { title, description, publishDate, author, authorURL, heroImage, permalink
 	</head>
 
 	<body>
+		<ThemeWrapper>
 		<BlogHeader />
-		<ThemeWrapper class="wrapper">
 			<BlogPost {title} {author} {authorURL} {heroImage} {publishDate} {alt}>
 				<slot />
 			</BlogPost>

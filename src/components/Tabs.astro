@@ -1,0 +1,17 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+<div class="flex justify-between">
+<div class="tabs">
+    <a class={`${currentPath === "" ? "tab-active" : ""} tab tab-lifted tab-lg`} href="/">Home</a> 
+    <a class={`${currentPath === "blog" || currentPath.split("/")[0] === "posts" ? "tab-active" : ""} tab tab-lifted tab-lg`} href="/blog">Blog</a> 
+    <a class={`${currentPath === "about" ? "tab-active" : ""} tab tab-lifted tab-lg`} href="/about">About</a>
+    <a class={`${currentPath === "social" ? "tab-active" : ""} tab tab-lifted tab-lg`} href="/social">Social</a>
+  </div>
+<select data-choose-theme class="select select-bordered w-32">
+    <option value="garden" selected>Light</option>
+    <option value="retro">Retro</option>
+    <option value="luxury">Dark</option>
+  </select>
+</div>

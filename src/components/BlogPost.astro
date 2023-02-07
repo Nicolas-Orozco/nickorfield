@@ -12,11 +12,12 @@ export interface Props {
 
 const { title, author, authorURL, publishDate, heroImage, alt } = Astro.props as Props;
 import Comments from "../components/Comments"
+import ThemeWrapper from './ThemeWrapper.astro';
 
 ---
 
 <div class="layout">
-	<article class="content">
+	<ThemeWrapper>
 		<div>
 			<header>
 				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
@@ -29,5 +30,5 @@ import Comments from "../components/Comments"
 			</main>
 		</div>
 		<Comments client:load/>
-	</article>
+	</ThemeWrapper>
 </div>
