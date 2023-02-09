@@ -24,7 +24,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 <html lang="en">
 	<head>
-		<BaseHead {title} {description} {permalink} />
+		<BaseHead {...(title as any)} {...(description as any)} {...(permalink as any)} />
 
 		<style>
 			header {
@@ -79,7 +79,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				</section>
 			</main>
 			<footer>
-			<a href="/admin">Admin Dashboard 🔐</a>
+			<a href="/admin" class="hidden">Admin Dashboard 🔐</a>
 			</footer>
 		</div>
 	</body>
