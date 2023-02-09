@@ -24,7 +24,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 <html lang="en">
 	<head>
-		<BaseHead {...(title as any)} {...(description as any)} {...(permalink as any)} />
+		<BaseHead {title} {description} {permalink} />
 
 		<style>
 			header {
