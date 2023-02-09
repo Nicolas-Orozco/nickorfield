@@ -10,7 +10,7 @@ import { SITE } from '../config';
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 let { title } = SITE;
-let description = 'The perfect starter for your perfect blog.';
+let description = "A place where I'll put some of my projects, writing and miscellaneous.";
 let permalink = 'https://example.com/';
 
 // Data Fetching: List all Markdown posts in the repo.
@@ -22,58 +22,29 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
+<html lang="en" data-theme="autumn">
 	<head>
 		<BaseHead {title} {description} {permalink} />
-
-		<style>
-			header {
-				width: 100%;
-				height: 100%;
-				background-color: var(--theme-bg-offset);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.content {
-				margin-top: 4rem;
-				margin-bottom: 8rem;
-			}
-
-			.content :global(main > * + *) {
-				margin-top: 1rem;
-			}
-
-			.intro {
-				padding-bottom: 4rem;
-				margin-bottom: 2rem;
-				border-bottom: 4px solid var(--theme-divider);
-			}
-
-			.intro > * {
-				margin: 0;
-			}
-
-			.latest {
-				font-size: 2.5rem;
-				font-weight: 700;
-			}
-
-			footer {
-				text-align: center;
-			}
-		</style>
 	</head>
 
-	<body>
+	<body class="max-w-7xl mx-auto px-4 sm:px-8">
 		<BlogHeader />
 		<div class="wrapper">
 			<main class="content">
 				<section class="intro">
-					<h1 class="latest">{title}</h1>
+					<h1 class="title">Greetings to</h1>
 					<p>{description}</p>
 				</section>
+				<br/>
+				<section class="social">
+					<h1 class="title">Social</h1>
+					<p>You can reach me out here</p>
+					<div class="flex flex-col">
+						<a href="https://spacehey.com/nickorfield" target="_blank">Spacehey</a>
+						<a href="mailto:nick.orfield1@gmail.com" target="_blank">Mail</a>
+					</div>
+				</section>
+				<br/>
 				<section aria-label="Blog post list">
 					{allPosts.map((p) => <BlogPostPreview post={p} />)}
 				</section>

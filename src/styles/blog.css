@@ -4,6 +4,15 @@
 
 @layer base {
   html {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    @apply font-serif;
+  }
+  body {
+    @apply text-xl;
+  }
+  .title {
+    @apply text-4xl font-bold;
+  }
+  a {
+    @apply link;
   }
 }
