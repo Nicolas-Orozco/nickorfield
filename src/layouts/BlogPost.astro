@@ -7,12 +7,12 @@ const { content } = Astro.props;
 const { title, description, publishDate, author, authorURL, heroImage, permalink, alt } = content;
 ---
 
-<html lang={content.lang || 'en'}>
+<html lang={content.lang || 'en'} data-theme="autumn">
 	<head>
 		<BaseHead {title} {description} {permalink} />
 	</head>
 
-	<body>
+	<body class="max-w-7xl mx-auto px-8">
 		<BlogHeader />
 		<div class="wrapper">
 			<BlogPost {title} {author} {authorURL} {heroImage} {publishDate} {alt}>

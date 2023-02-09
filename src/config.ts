@@ -1,3 +1,3 @@
 export const SITE = {
-  title: 'Astro Blog with Netlify CMS',
+  title: "Nick Orfield and an online cavern",
 };
