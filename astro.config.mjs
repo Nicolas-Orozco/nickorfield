@@ -1,7 +1,8 @@
 import { defineConfig } from "astro/config";
 import NetlifyCMS from "astro-netlify-cms";
-
 import tailwind from "@astrojs/tailwind";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,6 +39,30 @@ export default defineConfig({
                 date_format: "DD MMM YYYY",
                 time_format: false,
                 label: "Publish Date",
+              },
+              {
+                name: "tag",
+                widget: "select",
+                required: true,
+                default: "blog",
+                options: [
+                  {
+                    label: "Blog",
+                    value: "blog",
+                  },
+                  {
+                    label: "Prose",
+                    value: "prose",
+                  },
+                  {
+                    label: "Poetry",
+                    value: "poetry",
+                  },
+                  {
+                    label: "Media",
+                    value: "media",
+                  },
+                ],
               },
               {
                 name: "author",
@@ -80,5 +105,6 @@ export default defineConfig({
       previewStyles: ["/src/styles/blog.css"],
     }),
     tailwind(),
+    react(),
   ],
 });

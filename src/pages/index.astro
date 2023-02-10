@@ -2,7 +2,8 @@
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
+import BlogPostPreview from '../components/BlogPostPreview';
+import PostSorter from '../components/PostSorter';
 import { SITE } from '../config';
 
 // Component Script:
@@ -16,7 +17,6 @@ let permalink = 'https://example.com/';
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = await Astro.glob('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -31,22 +31,23 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 		<BlogHeader />
 		<div class="wrapper">
 			<main class="content">
-				<section class="intro">
+				<section class="intro pb-4">
 					<h1 class="title">Greetings to</h1>
 					<p>{description}</p>
 				</section>
 				<br/>
-				<section class="social">
+				<section class="social border-b-4 pb-8">
 					<h1 class="title">Social</h1>
-					<p>You can reach me out here</p>
+					<p>You can reach me out here:</p>
 					<div class="flex flex-col">
 						<a href="https://spacehey.com/nickorfield" target="_blank">Spacehey</a>
 						<a href="mailto:nick.orfield1@gmail.com" target="_blank">Mail</a>
 					</div>
 				</section>
 				<br/>
-				<section aria-label="Blog post list">
-					{allPosts.map((p) => <BlogPostPreview post={p} />)}
+				<section aria-label="Blog post list" class="border-b-4 pb-10">
+					<h1 class="title text-warning">The Blog</h1>
+					<PostSorter allPosts={allPosts} client:load/>
 				</section>
 			</main>
 			<footer>
