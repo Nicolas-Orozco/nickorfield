@@ -1,7 +1,7 @@
 import BlogPostPreview from "./BlogPostPreview";
-import { useState } from "react";
+import useSessionStorage from "../hooks/useSessionStorage";
 function PostSorter({ allPosts }) {
-  const [currentTag, setcurrentTag] = useState("all");
+  const [currentTag, setcurrentTag] = useSessionStorage("all");
   allPosts = allPosts.sort(
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -
@@ -13,7 +13,9 @@ function PostSorter({ allPosts }) {
       <div className="tabs tabs-boxed">
         <a
           onClick={() => setcurrentTag("all")}
-          className={`${currentTag === "all" && "tab-active"} tab`}
+          className={`${
+            (currentTag === "all" || currentTag === undefined) && "tab-active"
+          } tab`}
         >
           all
         </a>
@@ -26,7 +28,7 @@ function PostSorter({ allPosts }) {
           </a>
         ))}
       </div>
-      {currentTag === "all"
+      {currentTag === "all" || currentTag === undefined
         ? allPosts.map((p) => <BlogPostPreview post={p} />)
         : sortedPosts.map((p) => <BlogPostPreview post={p} />)}
     </>
