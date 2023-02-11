@@ -7,19 +7,21 @@ function PostSorter({ allPosts }) {
     .map((p) => <BlogPostPreview post={p} key={p.frontmatter.uuid} />);
   return (
     <>
-      <div className="tabs tabs-boxed">
+      <div className="tabs tabs-boxed my-8">
         <a
           onClick={() => setcurrentTag("all")}
           className={`${
             (currentTag === "all" || currentTag === undefined) && "tab-active"
-          } tab`}
+          } tab text-xl m-2`}
         >
           all
         </a>
         {allPosts.map(({ frontmatter }) => (
           <a
             onClick={() => setcurrentTag(frontmatter.tag)}
-            className={`${currentTag === frontmatter.tag && "tab-active"} tab`}
+            className={`${
+              currentTag === frontmatter.tag && "tab-active"
+            } tab text-xl m-2`}
             key={frontmatter.uuid}
           >
             {frontmatter.tag}
@@ -27,7 +29,7 @@ function PostSorter({ allPosts }) {
         ))}
       </div>
       {currentTag === "all" || currentTag === undefined
-        ? allPosts.map((p, index) => <BlogPostPreview post={p} key={index} />)
+        ? allPosts.map((p) => <BlogPostPreview post={p} key={p.url} />)
         : sortedPosts}
     </>
   );
