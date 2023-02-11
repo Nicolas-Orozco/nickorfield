@@ -1,6 +1,7 @@
 ---
 title: Using Netlify CMS with an Astro site
 publishDate: 16 May 2022
+uuid: eb6a7405-1e5f-4a16-85b9-8608f44d7220
 tag: blog
 author: Chris Swithinbank
 authorURL: https://twitter.com/swithinbank

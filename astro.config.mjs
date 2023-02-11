@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import NetlifyCMS from "astro-netlify-cms";
 import tailwind from "@astrojs/tailwind";
-
+import { v4 as uuidv4 } from "uuid";
 import react from "@astrojs/react";
 
 // https://astro.build/config
@@ -39,6 +39,13 @@ export default defineConfig({
                 date_format: "DD MMM YYYY",
                 time_format: false,
                 label: "Publish Date",
+              },
+              {
+                name: "uuid",
+                widget: "string",
+                label: "UUID",
+                default: uuidv4(),
+                required: true,
               },
               {
                 name: "tag",

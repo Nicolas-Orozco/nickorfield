@@ -17,7 +17,10 @@ let permalink = 'https://example.com/';
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = await Astro.glob('./posts/*.md');
-
+allPosts = allPosts.sort((a, b) =>
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+);
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -47,7 +50,7 @@ let allPosts = await Astro.glob('./posts/*.md');
 				<br/>
 				<section aria-label="Blog post list" class="border-b-4 pb-10">
 					<h1 class="title text-warning">The Blog</h1>
-					<PostSorter allPosts={allPosts} client:load/>
+					<PostSorter allPosts={allPosts} client:only="react"/>
 				</section>
 			</main>
 			<footer>
