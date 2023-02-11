@@ -12,7 +12,7 @@ function PostSorter({ allPosts }) {
           onClick={() => setcurrentTag("all")}
           className={`${
             (currentTag === "all" || currentTag === undefined) && "tab-active"
-          } tab text-xl m-2`}
+          } tab tab-lg`}
         >
           all
         </a>
@@ -21,7 +21,7 @@ function PostSorter({ allPosts }) {
             onClick={() => setcurrentTag(frontmatter.tag)}
             className={`${
               currentTag === frontmatter.tag && "tab-active"
-            } tab text-xl m-2`}
+            } tab tab-lg`}
             key={frontmatter.uuid}
           >
             {frontmatter.tag}
