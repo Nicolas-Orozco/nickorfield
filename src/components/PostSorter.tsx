@@ -1,13 +1,10 @@
 import BlogPostPreview from "./BlogPostPreview";
-import useLocalStorage from "../hooks/useLocalStorage";
+import useSessionStorage from "../hooks/useSessionStorage";
 function PostSorter({ allPosts }) {
-  const [currentTag, setcurrentTag] = useLocalStorage("currentTag", "all");
-  allPosts = allPosts.sort(
-    (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() -
-      new Date(a.frontmatter.publishDate).valueOf()
-  );
-  const sortedPosts = allPosts.filter((p) => p.frontmatter.tag === currentTag);
+  const [currentTag, setcurrentTag] = useSessionStorage("currentTag", "all");
+  const sortedPosts = allPosts
+    .filter((p) => p.frontmatter.tag === currentTag)
+    .map((p) => <BlogPostPreview post={p} key={p.frontmatter.uuid} />);
   return (
     <>
       <div className="tabs tabs-boxed">
@@ -23,14 +20,15 @@ function PostSorter({ allPosts }) {
           <a
             onClick={() => setcurrentTag(frontmatter.tag)}
             className={`${currentTag === frontmatter.tag && "tab-active"} tab`}
+            key={frontmatter.uuid}
           >
             {frontmatter.tag}
           </a>
         ))}
       </div>
       {currentTag === "all" || currentTag === undefined
-        ? allPosts.map((p) => <BlogPostPreview post={p} />)
-        : sortedPosts.map((p) => <BlogPostPreview post={p} />)}
+        ? allPosts.map((p, index) => <BlogPostPreview post={p} key={index} />)
+        : sortedPosts}
     </>
   );
 }
