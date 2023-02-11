@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 function Comments() {
-  const divRef = useRef(0);
+  const divRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const s = document.createElement("script");
     s.setAttribute("repo", "Nicolas-Orozco/pozo-comments");
@@ -11,7 +11,7 @@ function Comments() {
     s.async = true;
     divRef.current.parentNode.insertBefore(s, divRef.current);
   });
-  return <div id="utterances" ref={divRef}></div>;
+  return <div id="utterances" className="border-b-4 pb-8" ref={divRef}></div>;
 }
 
 export default Comments;

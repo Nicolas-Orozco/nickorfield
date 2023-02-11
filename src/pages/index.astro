@@ -3,6 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview';
+import Footer from '../components/Footer.astro';
 import PostSorter from '../components/PostSorter';
 import { SITE } from '../config';
 
@@ -21,6 +22,7 @@ allPosts = allPosts.sort((a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -
       new Date(a.frontmatter.publishDate).valueOf()
 );
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -48,14 +50,13 @@ allPosts = allPosts.sort((a, b) =>
 					</div>
 				</section>
 				<br/>
-				<section aria-label="Blog post list" class="border-b-4">
+				<section aria-label="Blog post list" class="border-b-4 post-list">
 					<h1 class="title text-warning">The Blog</h1>
 					<PostSorter allPosts={allPosts} client:only="react"/>
 				</section>
+				<br/>
 			</main>
-			<footer>
-			<a href="/admin" class="hidden">Admin Dashboard 🔐</a>
-			</footer>
+<Footer/>
 		</div>
 	</body>
 </html>

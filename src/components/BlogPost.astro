@@ -1,6 +1,7 @@
 ---
 import Author from './Author.astro';
 import Comments from './Comments.jsx';
+import Footer from './Footer.astro';
 
 export interface Props {
 	title: string;
@@ -27,6 +28,7 @@ const { title, author, authorURL, publishDate, heroImage, alt } = Astro.props as
 				<slot />
 			</main>
 			<Comments client:load/>
+			<Footer/>
 		</div>
 	</article>
 </div>
