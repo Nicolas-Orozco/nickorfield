@@ -1,7 +1,7 @@
 import BlogPostPreview from "./BlogPostPreview";
-import useSessionStorage from "../hooks/useSessionStorage";
+import useLocalStorage from "../hooks/useLocalStorage";
 function PostSorter({ allPosts }) {
-  const [currentTag, setcurrentTag] = useSessionStorage("all");
+  const [currentTag, setcurrentTag] = useLocalStorage("currentTag", "all");
   allPosts = allPosts.sort(
     (a, b) =>
       new Date(b.frontmatter.publishDate).valueOf() -

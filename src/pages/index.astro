@@ -47,7 +47,7 @@ let allPosts = await Astro.glob('./posts/*.md');
 				<br/>
 				<section aria-label="Blog post list" class="border-b-4 pb-10">
 					<h1 class="title text-warning">The Blog</h1>
-					<PostSorter allPosts={allPosts} client:load/>
+					<PostSorter allPosts={allPosts} client:only="react"/>
 				</section>
 			</main>
 			<footer>
