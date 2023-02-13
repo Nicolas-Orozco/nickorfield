@@ -30,7 +30,7 @@ function PostSorter({ allPosts }) {
             (currentTag === "media" || currentTag === undefined) && "tab-active"
           } tab tab-lg`}
         >
-          blog
+          media
         </a>
         <a
           onClick={() => setcurrentTag("poetry")}
