@@ -11,7 +11,7 @@ function Comments() {
     s.async = true;
     divRef.current.parentNode.insertBefore(s, divRef.current);
   });
-  return <div id="utterances" className="border-b-4 pb-8" ref={divRef}></div>;
+  return <div id="utterances" className="border-b-4 mb-8" ref={divRef}></div>;
 }
 
 export default Comments;
