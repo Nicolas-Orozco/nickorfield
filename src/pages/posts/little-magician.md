@@ -3,6 +3,8 @@ title: '"Little magician"'
 publishDate: 13 Feb 2023
 uuid: f7e5fd24-997e-4a6d-a9e1-7206ea27c4aa
 tag: poetry
+author: Also on Medium
+authorURL: https://medium.com/@nickorfield/little-magician-b9cd3bd89c97
 description: Surreal and childish free verse
 layout: ../../layouts/BlogPost.astro
 ---

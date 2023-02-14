@@ -13,7 +13,7 @@ import { SITE } from '../config';
 // All variables are available to use in the HTML template below.
 let { title } = SITE;
 let description = "A place where I'll put some of my projects, writing, and miscellaneous.";
-let permalink = 'https://example.com/';
+let permalink = 'https://nickorfield.netlify.app/';
 
 // Data Fetching: List all Markdown posts in the repo.
 
@@ -52,6 +52,7 @@ allPosts = allPosts.sort((a, b) =>
 				<br/>
 				<section aria-label="Blog post list" class="border-b-4 post-list">
 					<h1 class="title text-warning">The Posts</h1>
+					<h2 class="text-primary">Tags:</h2>
 					<PostSorter allPosts={allPosts} client:only="react"/>
 								</section>
 				<br/>

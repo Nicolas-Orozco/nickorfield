@@ -76,6 +76,7 @@ export default defineConfig({
                 widget: "string",
                 label: "Author Name",
                 required: false,
+                default: "Also on Medium",
               },
               {
                 name: "authorURL",

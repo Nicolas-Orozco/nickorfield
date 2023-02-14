@@ -7,7 +7,7 @@ function PostSorter({ allPosts }) {
     .map((p) => <BlogPostPreview post={p} key={p.frontmatter.uuid} />);
   return (
     <>
-      <div className="tabs tabs-boxed my-8">
+      <div className="tabs tabs-boxed mt-4 mb-8">
         <a
           onClick={() => setcurrentTag("all")}
           className={`${
