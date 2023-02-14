@@ -24,7 +24,7 @@ const { title, author, authorURL, publishDate, heroImage, alt } = Astro.props as
 				<h1 class="title text-center">{title}</h1>
 				<Author name={author} href={authorURL} />
 			</header>
-			<main class="mb-20">
+			<main class="mb-20 [&>p]:mt-8">
 				<slot />
 			</main>
 			<Comments client:load/>
