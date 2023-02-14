@@ -18,13 +18,13 @@ const { title, author, authorURL, publishDate, heroImage, alt } = Astro.props as
 <div>
 	<article>
 		<div>
-			<header>
+			<header class="mb-16">
 				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
 				<p class="text-center">{publishDate}</p>
 				<h1 class="title text-center">{title}</h1>
 				<Author name={author} href={authorURL} />
 			</header>
-			<main class="mb-20 [&>p]:mt-8">
+			<main class="mb-20 [&>p]:my-8">
 				<slot />
 			</main>
 			<Comments client:load/>
