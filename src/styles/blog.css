@@ -21,4 +21,10 @@
   h3 {
     @apply text-2xl;
   }
+  .link {
+    @apply hover:text-blue-600 hover:decoration-blue-600 text-base visited:text-neutral-focus visited:decoration-base-100 duration-75;
+  }
+  [data-theme="halloween"] .link {
+    @apply hover:text-blue-600 visited:text-info-content;
+  }
 }
