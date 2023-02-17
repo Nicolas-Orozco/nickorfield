@@ -4,7 +4,7 @@ function PostSorter({ allPosts }) {
   const [currentTag, setcurrentTag] = useSessionStorage("currentTag", "all");
   const sortedPosts = allPosts
     .filter((p) => p.frontmatter.tag === currentTag)
-    .map((p) => <BlogPostPreview post={p} key={p.frontmatter.uuid} />);
+    .map((p, index) => <BlogPostPreview post={p} key={index} />);
   return (
     <>
       <div

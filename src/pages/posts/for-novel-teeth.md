@@ -1,13 +1,13 @@
 ---
 title: '"For novel teeth"'
 publishDate: 12 Feb 2023
-uuid: 659bc515-b491-497f-bd29-2267fa8144e0
 tag: poetry
 author: Also on Medium
 authorURL: https://medium.com/@nickorfield/for-novel-teeth-8a3ee065ba70
 description: Free verse poem
 layout: ../../layouts/BlogPost.astro
 ---
+
 ### **For novel teeth**
 
 Try slowly. No.\

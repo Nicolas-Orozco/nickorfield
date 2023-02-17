@@ -1,13 +1,13 @@
 ---
 title: '"Tranquil interruption"'
 publishDate: 18 Jan 2023
-uuid: aa4f6266-d9e4-404c-bc50-b1a69a195acb
 tag: poetry
 author: Also on Medium
 authorURL: https://medium.com/@nickorfield/tranquil-90c0b7b3225a
 description: Free verse
 layout: ../../layouts/BlogPost.astro
 ---
+
 ### **Tranquil interruption**
 
 Crawling in the bushes\

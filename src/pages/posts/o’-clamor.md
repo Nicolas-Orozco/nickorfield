@@ -1,13 +1,13 @@
 ---
 title: '"O’ clamor"'
 publishDate: 01 Feb 2023
-uuid: acf6ac0f-bf95-4e1b-ba19-84a143985c73
 tag: poetry
 author: Also on Medium
 authorURL: https://medium.com/@nickorfield/o-clamor-50459a254362
 description: Surreal free verse
 layout: ../../layouts/BlogPost.astro
 ---
+
 ### **O' clamor**
 
 Fruit of the path,\
