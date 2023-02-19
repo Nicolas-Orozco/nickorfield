@@ -1,5 +1,5 @@
 function BlogPostPreview({ post }) {
-  // Split publish date string into day, month, and year respectively
+  // Split publish date string into day, month, and year for 0, 1, 2 respectively
   const publishDates = post.frontmatter.publishDate.split(" ");
   return (
     <article className="mb-12 flex items-start">
