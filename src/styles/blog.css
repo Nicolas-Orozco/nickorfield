@@ -22,9 +22,9 @@
     @apply text-2xl;
   }
   .link {
-    @apply hover:text-blue-600 hover:decoration-blue-600 text-base visited:text-neutral-focus visited:decoration-base-100 duration-75;
+    @apply hover:text-warning hover:decoration-warning text-base visited:text-neutral-focus visited:decoration-base-100 duration-100;
   }
   [data-theme="halloween"] .link {
-    @apply hover:text-blue-600 visited:text-info-content;
+    @apply hover:text-warning visited:text-info-content;
   }
 }
