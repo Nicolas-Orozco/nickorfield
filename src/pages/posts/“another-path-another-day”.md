@@ -7,6 +7,7 @@ authorURL: https://nickorfield.medium.com/another-path-another-day-d46065875fc1
 description: "Free verse: A road(s)"
 layout: ../../layouts/BlogPost.astro
 ---
+
 ### **Another path, another day**
 
 From avenue to avenue, where do we go?\

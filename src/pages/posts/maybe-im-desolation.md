@@ -1,5 +1,5 @@
 ---
-title: "\"Maybe I'm desolation\""
+title: '"Maybe I''m desolation"'
 publishDate: 05 Jan 2023
 tag: prose
 author: Also on Medium
@@ -7,6 +7,7 @@ authorURL: https://medium.com/@nickorfield/maybe-im-desolation-a4f1501d40df
 description: Short story
 layout: ../../layouts/BlogPost.astro
 ---
+
 The surface of the desk was so scratchy it felt like it was hurting my face. Suddenly I was startled out of the dream fantasy. The place almost had some familiar office look, but it’s “almost” because it was utterly lonely, dark, and cluttered. Papers with reports were scattered in every corner you could see. A few file cabinets were nestled in each other’s corners as if they wanted to spread the warmth. Many armchairs lay on their sides on the floor, as well as a row of three bookcases filled with file cabinets.
 
 During those moments strangeness invaded my body and I couldn’t help but feel it. It asked me: What are you doing here; What happened; Who are you? Until I checked the patch pocket on the light blue long-sleeved shirt and slightly worn black chino pants I was wearing. With a flick of my wrist, I pulled out my employee ID. It read: “Max Douglas. Administrative Assistant. Date of birth: November 25, 1965 (…)”. It was a long day, but I still did not know why the company was like this, nor why there was no one on the floor. The doubts just kept piling up like bricks. Leaving the building through the front door didn’t help much.

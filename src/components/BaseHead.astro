@@ -1,10 +1,10 @@
 ---
-import '../styles/blog.css';
+import "../styles/blog.css";
 
 export interface Props {
-	title: string;
-	description: string;
-	permalink: string;
+  title: string;
+  description: string;
+  permalink: string;
 }
 const { title, description, permalink } = Astro.props;
 ---
@@ -15,19 +15,22 @@ const { title, description, permalink } = Astro.props;
 
 <!-- Theme changer -->
 <script is:inline>
-	// ☝️ This script prevent the FART effect.
-	if (localStorage.getItem("theme") === null) {
-	  document.documentElement.setAttribute("data-theme", "light");
-	} else
-	document.documentElement.setAttribute("data-theme",localStorage.getItem("theme"));
-	// "theme" LocalStorage value is set by the package to remember user preference.
-	// The value is checked and applyed before rendering anything.
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme")
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
 </script>
 <script>
-	import { themeChange } from "theme-change";
-	themeChange();
-	 // 👆 you could import the CDN directly instead of these two lines
-  </script>
+  import { themeChange } from "theme-change";
+  themeChange();
+  // 👆 you could import the CDN directly instead of these two lines
+</script>
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
@@ -40,14 +43,21 @@ const { title, description, permalink } = Astro.props;
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="https://drive.google.com/uc?export=download&id=1DCmS75eOaJpSsOB9OmXQh9-R2dGRB2Ce" />
+<meta
+  property="og:image"
+  content="https://drive.google.com/uc?export=download&id=1DCmS75eOaJpSsOB9OmXQh9-R2dGRB2Ce"
+/>
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://drive.google.com/uc?export=download&id=1DCmS75eOaJpSsOB9OmXQh9-R2dGRB2Ce" />
+<meta
+  property="twitter:image"
+  content="https://drive.google.com/uc?export=download&id=1DCmS75eOaJpSsOB9OmXQh9-R2dGRB2Ce"
+/>
 
 <!-- Fontawesome -->
-<script src="https://kit.fontawesome.com/f0d70bd660.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f0d70bd660.js" crossorigin="anonymous"
+></script>

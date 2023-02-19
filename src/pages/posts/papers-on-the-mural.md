@@ -7,6 +7,7 @@ authorURL: https://nickorfield.medium.com/papers-on-the-mural-1a7e90509bbe
 description: "Free verse: Nostalgia, all you'll know"
 layout: ../../layouts/BlogPost.astro
 ---
+
 ### **Papers on the Mural**
 
 Your cracks are full of pushes,\

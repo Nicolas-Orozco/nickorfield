@@ -1,12 +1,12 @@
 ---
 export interface Props {
-	name: string;
-	href: string;
+  name: string;
+  href: string;
 }
 
 const { name, href } = Astro.props;
 ---
 
 <div class="text-center">
-	<p><a class="text-xl" href={href}>{name}</a></p>
+  <p><a class="text-xl" href={href}>{name}</a></p>
 </div>
