@@ -7,6 +7,8 @@ authorURL: https://medium.com/@nickorfield/something-beyond-ac60c739725c
 description: Haiku
 layout: ../../layouts/BlogPost.astro
 ---
+### **Something beyond**
+
 The bus’ leaving now.
 
 Everyone looks their window,
