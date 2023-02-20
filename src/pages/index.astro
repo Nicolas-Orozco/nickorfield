@@ -70,6 +70,23 @@ allPosts = allPosts.sort(
           <PostSorter allPosts={allPosts} client:only="react" />
         </section>
         <br />
+        <script>
+          import waitForElm from "../components/waitForElm";
+          // Restore session scroll or zero when null
+          const currentY = parseInt(sessionStorage.getItem("currentY")) || 0;
+          window.addEventListener("load", () => {
+            // Wait for page load and PostSorter load to restore session scroll
+            waitForElm(".tabs-boxed").then(() =>
+              window.scrollTo({ left: 0, top: currentY, behavior: "auto" })
+            );
+            //setTimeout(() => window.scroll(0, currentY), 250)
+          });
+          // Set session scroll when changing page
+          window.addEventListener("unload", () => {
+            sessionStorage.setItem("currentY", window.scrollY.toString());
+          });
+          console.log(currentY);
+        </script>
       </main>
       <Footer />
     </div>
