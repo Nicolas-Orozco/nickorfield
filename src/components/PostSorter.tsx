@@ -19,19 +19,24 @@ function PostSorter({ allPosts }) {
         >
           all
         </a>
-        {[...new Set(allPosts.map((p) => p.frontmatter.tag))].map(
-          (tag, index) => (
-            <a
-              onClick={() => setcurrentTag(tag)}
-              className={`${
-                (currentTag === tag || currentTag === undefined) && "tab-active"
-              } tab tab-lg`}
-              key={index}
-            >
-              {tag}
-            </a>
+
+        {
+          //Filter for duplicate tags and map for links
+          [...new Set(allPosts.map((p) => p.frontmatter.tag))].map(
+            (tag: string, index) => (
+              <a
+                onClick={() => setcurrentTag(tag)}
+                className={`${
+                  (currentTag === tag || currentTag === undefined) &&
+                  "tab-active"
+                } tab tab-lg`}
+                key={index}
+              >
+                {tag}
+              </a>
+            )
           )
-        )}
+        }
       </div>
       {currentTag === "all" || currentTag === undefined
         ? allPosts.map((p) => <BlogPostPreview post={p} key={p.url} />)
