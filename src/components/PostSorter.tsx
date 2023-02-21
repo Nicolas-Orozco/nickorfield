@@ -19,39 +19,19 @@ function PostSorter({ allPosts }) {
         >
           all
         </a>
-        <a
-          onClick={() => setcurrentTag("blog")}
-          className={`${
-            (currentTag === "blog" || currentTag === undefined) && "tab-active"
-          } tab tab-lg`}
-        >
-          blog
-        </a>
-        <a
-          onClick={() => setcurrentTag("media")}
-          className={`${
-            (currentTag === "media" || currentTag === undefined) && "tab-active"
-          } tab tab-lg`}
-        >
-          media
-        </a>
-        <a
-          onClick={() => setcurrentTag("poetry")}
-          className={`${
-            (currentTag === "poetry" || currentTag === undefined) &&
-            "tab-active"
-          } tab tab-lg`}
-        >
-          poetry
-        </a>
-        <a
-          onClick={() => setcurrentTag("prose")}
-          className={`${
-            (currentTag === "prose" || currentTag === undefined) && "tab-active"
-          } tab tab-lg`}
-        >
-          prose
-        </a>
+        {[...new Set(allPosts.map((p) => p.frontmatter.tag))].map(
+          (tag, index) => (
+            <a
+              onClick={() => setcurrentTag(tag)}
+              className={`${
+                (currentTag === tag || currentTag === undefined) && "tab-active"
+              } tab tab-lg`}
+              key={index}
+            >
+              {tag}
+            </a>
+          )
+        )}
       </div>
       {currentTag === "all" || currentTag === undefined
         ? allPosts.map((p) => <BlogPostPreview post={p} key={p.url} />)
