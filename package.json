@@ -1,8 +1,8 @@
 {
-  "name": "@example/blog",
+  "name": "nickorfield",
   "version": "0.0.1",
   "private": true,
-  "license": "MIT",
+  "license": "GNU V.3.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
