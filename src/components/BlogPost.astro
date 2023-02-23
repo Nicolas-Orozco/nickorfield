@@ -39,7 +39,11 @@ const { title, author, authorURL, publishDate, heroImage, alt } =
       <main class="mb-20 [&>p]:my-8">
         <slot />
       </main>
+      <footer class="font-bold mb-12">
+        Thanks for reading/gracias por leer.
+      </footer>
       <Comments client:load />
+      {/*(This footer is) for the home page and blog posts */}
       <Footer />
     </div>
   </article>
