@@ -1,5 +1,10 @@
 ---
-const { link, icon, name } = Astro.props;
+export interface Props {
+  link: string;
+  icon: string;
+  name: string;
+}
+const { link, icon, name } = Astro.props as Props;
 ---
 
 <li>
