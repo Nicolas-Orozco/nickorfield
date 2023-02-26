@@ -1,4 +1,14 @@
-function BlogPostPreview({ post }) {
+export interface fullPost {
+  post: {
+    url: string;
+    frontmatter: {
+      publishDate: string;
+      title: string;
+      description: string;
+    };
+  };
+}
+function BlogPostPreview({ post }: fullPost) {
   // Split publish date string into day, month, and year for 0, 1, 2 respectively
   const publishDates = post.frontmatter.publishDate.split(" ");
   return (
