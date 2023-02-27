@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 function Comments() {
   const divRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
-    const s = document.createElement("script");
+    const s: HTMLScriptElement = document.createElement("script");
     s.setAttribute("repo", "Nicolas-Orozco/pozo-comments");
     s.setAttribute("issue-term", "title");
     s.setAttribute("theme", "github-dark");
