@@ -102,7 +102,7 @@ export default defineConfig({
           },
         ],
       },
-      previewStyles: ["/src/styles/blog.css"],
+      previewStyles: ["/src/styles/index.css"],
     }),
     tailwind(),
     react(),
