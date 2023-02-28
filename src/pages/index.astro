@@ -34,6 +34,23 @@ allPosts = allPosts.sort(
   </head>
 
   <body class="max-w-6xl mx-auto px-4 sm:px-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5J0JEWXHWZ"
+    ></script>
+    <script>
+      declare global {
+        interface Window {
+          dataLayer: any;
+        }
+      }
+
+      let dataLayer = window.dataLayer || [];
+      function gtag(a: string, b: string | object) {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5J0JEWXHWZ");
+    </script>
     <script src="wc-github-corners"></script>
     <github-corners
       fill="#f28c18"
