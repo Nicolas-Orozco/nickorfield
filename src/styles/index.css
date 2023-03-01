@@ -7,19 +7,19 @@
     @apply font-serif;
   }
   body {
-    @apply text-xl;
+    @apply text-lg md:text-xl;
   }
   .title {
-    @apply text-4xl font-bold mb-1;
+    @apply text-3xl md:text-4xl font-bold mb-1;
   }
   a {
     @apply link;
   }
   h2 {
-    @apply text-3xl;
+    @apply text-2xl md:text-3xl;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-xl md:text-2xl;
   }
   .link {
     @apply hover:text-warning hover:decoration-warning text-base visited:text-neutral-focus visited:decoration-base-100 duration-100;
