@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/Nicolas-Orozco/nickorfield/main/public/final_full_logo.svg" alt="Nick Orfield's logo" width="200"/>
+# <img src="https://raw.githubusercontent.com/Nicolas-Orozco/nickorfield/main/public/logo.svg" alt="Nick Orfield's logo" width="200"/>
 
 Another semi-personal blog website based on Astro, NetlifyCMS, and TailwindCSS.
 
