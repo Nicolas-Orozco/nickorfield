@@ -39,13 +39,15 @@ const {
       gtag("js", new Date());
       gtag("config", "G-5J0JEWXHWZ");
     </script>
+    <!-- Github corner web component -->
     <script src="wc-github-corners"></script>
     <github-corners
       fill="#f28c18"
       repo="nicolas-orozco/nickorfield"
       blank={true}></github-corners>
-    <BlogHeader />
+    <!-- Blog Structure -->
     <article>
+      <BlogHeader />
       <BlogPost {title} {author} {authorURL} {heroImage} {publishDate} {alt}>
         <slot />
       </BlogPost>
