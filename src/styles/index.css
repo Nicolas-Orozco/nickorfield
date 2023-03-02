@@ -22,9 +22,12 @@
     @apply text-xl md:text-2xl;
   }
   .link {
-    @apply hover:text-warning hover:decoration-warning text-base visited:text-neutral-focus visited:decoration-base-100 duration-100;
+    @apply hover:text-primary hover:decoration-primary text-base visited:text-neutral-focus visited:decoration-base-100 duration-100;
   }
   [data-theme="halloween"] .link {
-    @apply hover:text-warning visited:text-info-content;
+    @apply hover:text-accent hover:decoration-accent visited:text-info-content;
+  }
+  [data-theme="halloween"] .tag-text-selector {
+    @apply text-accent;
   }
 }
