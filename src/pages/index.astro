@@ -106,7 +106,7 @@ allPosts = allPosts.sort(
             //setTimeout(() => window.scroll(0, currentY), 250)
           });
           // Set session scroll when changing page
-          window.addEventListener("unload", () => {
+          window.addEventListener("visibilitychange", () => {
             sessionStorage.setItem("currentY", window.scrollY.toString());
           });
         </script>
