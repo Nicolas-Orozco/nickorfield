@@ -7,7 +7,6 @@ authorURL: https://medium.com/@nickorfield/for-novel-teeth-8a3ee065ba70
 description: Free verse poem
 layout: ../../layouts/BlogPost.astro
 ---
-
 ### **For novel teeth**
 
 Try slowly. No.\
@@ -18,7 +17,7 @@ of alluvium\
 looming from\
 the north winds?\
 It remains to peep\
-in ruins, peers on mines\
+in ruins, peers on landmines\
 of gold\
 through a narrow peak\
 and between the rock\
