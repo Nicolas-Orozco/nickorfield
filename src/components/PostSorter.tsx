@@ -14,20 +14,20 @@ function PostSorter({ queryPosts }: PostsType) {
         className="tabs tabs-boxed mt-4 mb-8 [&>*]:border-r-2 [&>*]:border-base-content
 "
       >
-        <a
+        <span
           onClick={() => setcurrentTag("all")}
           className={`${
             (currentTag === "all" || currentTag === undefined) && "tab-active"
           } tab tab-lg`}
         >
           all
-        </a>
+        </span>
 
         {
           // Filter for duplicate tags and map for links
           [...new Set(queryPosts.map((p) => p.frontmatter.tag))].map(
             (tag: string, index) => (
-              <a
+              <span
                 onClick={() => setcurrentTag(tag)}
                 className={`${
                   (currentTag === tag || currentTag === undefined) &&
@@ -36,7 +36,7 @@ function PostSorter({ queryPosts }: PostsType) {
                 key={index}
               >
                 {tag}
-              </a>
+              </span>
             )
           )
         }
