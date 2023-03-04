@@ -91,7 +91,7 @@ allPosts = allPosts.sort(
         <section aria-label="Blog post list" class="border-b-4 post-list">
           <h1 class="title text-warning">The Posts</h1>
           <h2 class="text-primary tag-text-selector">Select a tag ⬇️</h2>
-          <PostSorter allPosts={allPosts} client:only="react" />
+          <PostSorter queryPosts={allPosts} client:only="react" />
         </section>
         <br />
         <script>
@@ -103,7 +103,7 @@ allPosts = allPosts.sort(
             waitForElm(".tabs-boxed").then(() =>
               window.scrollTo({ left: 0, top: currentY, behavior: "auto" })
             );
-            //setTimeout(() => window.scroll(0, currentY), 250)
+            // setTimeout(() => window.scroll(0, currentY), 250)
           });
           // Set session scroll when changing page
           window.addEventListener("visibilitychange", () => {

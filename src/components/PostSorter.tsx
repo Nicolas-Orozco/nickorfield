@@ -1,8 +1,11 @@
 import BlogPostPreview from "./BlogPostPreview";
 import useSessionStorage from "../hooks/useSessionStorage";
-function PostSorter({ allPosts }) {
+export interface PostsType {
+  queryPosts: Array<any>;
+}
+function PostSorter({ queryPosts }: PostsType) {
   const [currentTag, setcurrentTag] = useSessionStorage("currentTag", "all");
-  const sortedPosts = allPosts
+  const sortedPosts = queryPosts
     .filter((p) => p.frontmatter.tag === currentTag)
     .map((p, index) => <BlogPostPreview post={p} key={index} />);
   return (
@@ -11,20 +14,20 @@ function PostSorter({ allPosts }) {
         className="tabs tabs-boxed mt-4 mb-8 [&>*]:border-r-2 [&>*]:border-base-content
 "
       >
-        <a
+        <span
           onClick={() => setcurrentTag("all")}
           className={`${
             (currentTag === "all" || currentTag === undefined) && "tab-active"
           } tab tab-lg`}
         >
           all
-        </a>
+        </span>
 
         {
-          //Filter for duplicate tags and map for links
-          [...new Set(allPosts.map((p) => p.frontmatter.tag))].map(
+          // Filter for duplicate tags and map for links
+          [...new Set(queryPosts.map((p) => p.frontmatter.tag))].map(
             (tag: string, index) => (
-              <a
+              <span
                 onClick={() => setcurrentTag(tag)}
                 className={`${
                   (currentTag === tag || currentTag === undefined) &&
@@ -33,13 +36,13 @@ function PostSorter({ allPosts }) {
                 key={index}
               >
                 {tag}
-              </a>
+              </span>
             )
           )
         }
       </div>
       {currentTag === "all" || currentTag === undefined
-        ? allPosts.map((p) => <BlogPostPreview post={p} key={p.url} />)
+        ? queryPosts.map((p) => <BlogPostPreview post={p} key={p.url} />)
         : sortedPosts}
     </>
   );
