@@ -18,7 +18,7 @@ function PostSorter({ queryPosts }: PostsType) {
           onClick={() => setcurrentTag("all")}
           className={`${
             (currentTag === "all" || currentTag === undefined) && "tab-active"
-          } tab tab-lg`}
+          } tab tab-lg font-bold`}
         >
           all
         </span>
@@ -32,7 +32,7 @@ function PostSorter({ queryPosts }: PostsType) {
                 className={`${
                   (currentTag === tag || currentTag === undefined) &&
                   "tab-active"
-                } tab tab-lg`}
+                } tab tab-lg font-bold`}
                 key={index}
               >
                 {tag}
