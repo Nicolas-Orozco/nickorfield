@@ -1,4 +1,4 @@
-export interface fullPost {
+export interface typePost {
   post: {
     url: string;
     frontmatter: {
@@ -8,7 +8,7 @@ export interface fullPost {
     };
   };
 }
-function BlogPostPreview({ post }: fullPost) {
+function BlogPostPreview({ post }: typePost) {
   // Split publish date string into day, month, and year for 0, 1, 2 respectively
   const publishDates = post.frontmatter.publishDate.split(" ");
   return (

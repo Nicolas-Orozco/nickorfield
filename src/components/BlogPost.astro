@@ -8,41 +8,26 @@ export interface Props {
   author: string;
   authorURL: string;
   publishDate: string;
-  heroImage: string;
-  alt: string;
 }
 
-const { title, author, authorURL, publishDate, heroImage, alt } =
-  Astro.props as Props;
+const { title, author, authorURL, publishDate } = Astro.props as Props;
 ---
 
 <div>
   <article>
-      <header class="mb-16">
-        {
-          heroImage && (
-            <img
-              width="720"
-              height="420"
-              class="hero-image"
-              loading="lazy"
-              src={heroImage}
-              alt={alt}
-            />
-          )
-        }
-        <p class="text-center">{publishDate}</p>
-        <h1 class="title text-center">{title}</h1>
-        <Author name={author} href={authorURL} />
-      </header>
-      <main class="mb-20 [&>p]:my-8">
-        <slot />
-      </main>
-      <footer class="font-bold mb-12">
-        Thanks for reading/gracias por leer.
-      </footer>
-      <Comments client:load />
-      {/*(This footer is) for the home page and blog posts */}
-      <Footer />
+    <header class="mb-16">
+      <p class="text-center">{publishDate}</p>
+      <h1 class="title text-center">{title}</h1>
+      <Author name={author} href={authorURL} />
+    </header>
+    <main class="mb-20 [&>p]:my-8">
+      <slot />
+    </main>
+    <footer class="font-bold mb-12">
+      Thanks for reading/gracias por leer.
+    </footer>
+    <Comments client:load />
+    {/*(This footer is) for the home page and blog posts */}
+    <Footer />
   </article>
 </div>
