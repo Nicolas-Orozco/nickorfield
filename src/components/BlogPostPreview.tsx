@@ -8,9 +8,9 @@ export interface typePost {
     };
   };
 }
-function BlogPostPreview({ post }: typePost) {
+function BlogPostPreview({ post: { frontmatter, url } }: typePost) {
   // Split publish date string into day, month, and year for 0, 1, 2 respectively
-  const publishDates = post.frontmatter.publishDate.split(" ");
+  const publishDates = frontmatter.publishDate.split(" ");
   return (
     <article className="mb-14 flex items-start">
       <div className="text-center">
@@ -20,14 +20,14 @@ function BlogPostPreview({ post }: typePost) {
       <div className="ml-5 mt-1">
         <header>
           <a
-            aria-label={post.frontmatter.description}
+            aria-label={frontmatter.description}
             className="link-hover"
-            href={post.url}
+            href={url}
           >
-            <h1 className="title">{post.frontmatter.title}</h1>
+            <h1 className="title">{frontmatter.title}</h1>
+            <p className="text-xl">{frontmatter.description}</p>
           </a>
         </header>
-        <p>{post.frontmatter.description}</p>
       </div>
     </article>
   );
