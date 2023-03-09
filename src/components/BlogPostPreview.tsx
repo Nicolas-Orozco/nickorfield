@@ -25,9 +25,9 @@ function BlogPostPreview({ post: { frontmatter, url } }: typePost) {
             href={url}
           >
             <h1 className="title">{frontmatter.title}</h1>
+            <p className="text-xl">{frontmatter.description}</p>
           </a>
         </header>
-        <p>{frontmatter.description}</p>
       </div>
     </article>
   );

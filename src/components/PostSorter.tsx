@@ -11,7 +11,7 @@ function PostSorter({ queryPosts }: PostsType) {
   return (
     <>
       <div
-        className="tabs tabs-boxed mt-4 mb-8 [&>*]:border-r-2 [&>*]:border-base-content
+        className="tabs tabs-boxed shadow mt-4 mb-8 [&>*]:border-r-2 [&>*]:border-base-content
 "
       >
         <span
